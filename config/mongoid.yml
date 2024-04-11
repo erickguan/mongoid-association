@@ -1,0 +1,36 @@
+development:
+  clients:
+    default:
+      database: test_dev
+      hosts:
+        - 'localhost:27017'
+      options:
+        truncate_logs: false
+  options:
+    use_utc: true
+    use_activesupport_time_zone: false # Use `Time` class instead of `TimeWithZone`
+    include_root_in_json: true
+
+test:
+  clients:
+    default:
+      database: test_test
+      hosts:
+        - 'localhost:27017'
+  options:
+    use_utc: true
+    use_activesupport_time_zone: false # Use `Time` class instead of `TimeWithZone`
+    include_root_in_json: true
+
+production:
+  clients:
+    default:
+      database: test_production
+      hosts:
+        - 'localhost:27017'
+      options:
+        truncate_logs: false
+  options:
+    use_utc: true
+    use_activesupport_time_zone: false # Use `Time` class instead of `TimeWithZone`
+    include_root_in_json: true
